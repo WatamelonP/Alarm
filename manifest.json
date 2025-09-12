@@ -1,0 +1,17 @@
+{
+    "name" : "Focus Alarm",
+    "description" : "Sound an alarm when you open a tab you designated as Distraction",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions" : [
+        "tabs",
+        "bookmarks"
+    ],
+    "background": {
+    "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Focus Alarm"
+  }
+
+}
