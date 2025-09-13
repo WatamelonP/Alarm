@@ -1,17 +1,28 @@
 {
-    "name" : "Focus Alarm",
-    "description" : "Sound an alarm when you open a tab you designated as Distraction",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions" : [
-        "tabs",
-        "bookmarks"
-    ],
-    "background": {
+  "manifest_version": 3,
+  "name": "Distraction Alarm",
+  "version": "1.0",
+  "description": "Plays an alarm when you open a distracting tab.",
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "storage",
+    "scripting",
+    "offscreen"
+  ],
+  "background": {
     "service_worker": "background.js"
-    },
-    "action": {
-        "default_title": "Focus Alarm"
-  }
-
+  },  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Distraction Alarm"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["Alarm.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
