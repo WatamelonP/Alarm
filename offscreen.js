@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener((msg) => {
   }
 });
 
+
 function stopAllAlarms() {
   if (sounds.Alarm && Array.isArray(sounds.Alarm.audios)) {
     for (const audio of sounds.Alarm.audios) {
@@ -21,6 +22,7 @@ function stopAllAlarms() {
   }
 }
 
+// this from https://github.com/swantzter/crx-falling-metal-pipe
 const sounds = {
   Alarm: {
     audios: new Array(50).fill(undefined),
@@ -29,6 +31,9 @@ const sounds = {
   }
 }
 
+// got this function from https://github.com/swantzter/crx-falling-metal-pipe
+// THANK YOU SO MUCH SWANTZTER FOR YOUR OPEN SOURCE PROJECT I COULDNT HAVE MADE
+// THIS PROJECT WITHOUT YOUR HELP
 async function playSound(type) {
   if (!(type in sounds)) {
     console.warn(`Attempted to play unknown sound: ${type}`);

@@ -2,8 +2,6 @@
 #### Video Demo:  <URL HERE>
 #### Description: This is a Chrome extension where it plays a sound on a loop every time the user opens a tab that can serve as a distraction. The user can designate a URL as a distraction by adding the link as a bookmark inside the automatically generated bookmarks tab. This is an extension that only works if the user wants to help themself.
 
-
-
 #### known issues:
 #### CTRL + shift + t to reopen a disruptive tab triggers the same event multiple times. 
 #### popup.html wont work as intended.
@@ -17,9 +15,12 @@
 #### References used:    
 #### https://github.com/swantzter/crx-falling-metal-pipe 
 #### https://github.com/engelsjk/chrome-extension-request-audio
+#### https://stackoverflow.com/questions/14834520/html5-audio-stop-function
+
 
 #### Tools used:
 #### GPT: mainly for catching errors and fixing wrong syntax. most of the codes i used are from me piecing things together from other repositories such as the ones above.
+#### Copilot: basically style50 lol
 #### Lottie: Used this to animate the sticker i used.
 
 
