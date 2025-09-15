@@ -18,7 +18,7 @@
   ],
   "action": {
     "default_title": "Distraction Alarm",
-    "default_popup": "popup.html"
+    "default_popup": "offscreen.html"
   },
    "icons": {
     "16": "herta-confident.png",

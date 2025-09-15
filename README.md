@@ -18,8 +18,22 @@
 
 
 #### manifest.json:
-#### contains permissions 
+#### contains permissions, icons, resources used, and actions such as the popup
 
+#### offscreen.html:
+#### accidentally swapped this and the popup.html... too tired to swap, nothing really changes.(ill proabbly be confused later on) uses the 
+
+#### popup.html:
+#### same as offscreen, just for the window this time. this is the window that popsup whenever you trigger the alarm.
+
+#### offscreen.js:
+#### basically has the functions to play the sound, and the function to pause it if the tab gets closed(condition on the other )
+
+#### background.js: 
+#### the backbone. generates the "distraction" tab upon implementation, checks the current open tabs, activates the alarm upon meeting the conditions. this one was the most chaotic part of the system because at the first 3 days, i had the function names that are either so similar to each other, or something incomprehensible the day after. i had to ask copilot to change the names to something more appropriate, since it probably knew the context. but ye when i tried manually changing the names, it broke every single time. this took me the most time to make because of me, myself, and i.
+
+#### Herta.json:
+#### The lottie file i used. GIFS are too low quality when i tried it but lottie does the work. this one took me the most prompts since all of the examples ive seen are mostly used within react. it took me a while to know how to implement it such as it being unable without the lottie-player.js being within the same folder(cant run with it being online.)
 
 #### Credits:
 #### Honkai Star Rail's Herta and The Herta ingame voicelines, and sticker.
@@ -34,7 +48,7 @@
 
 #### Tools used:
 #### GPT: mainly for catching errors and fixing wrong syntax. most of the codes i used are from me piecing things together from other repositories such as the ones above.
-#### Copilot: basically style50 lol
+#### Copilot: basically style50 lol(and implementing lottie. this took me the most prompts. barely just fixing with it mentioning that i cant run this without the lottie runner file being within folder.)
 #### Lottie: Used this to animate the sticker i used.
 
 
