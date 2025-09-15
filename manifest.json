@@ -17,11 +17,16 @@
     "<all_urls>"
   ],
   "action": {
-    "default_title": "Distraction Alarm"
+    "default_title": "Distraction Alarm",
+    "defaul_popup": "popup.html"
   },
   "web_accessible_resources": [
     {
-      "resources": ["Alarm.mp3"],
+      "resources": [
+        "Alarm.mp3",
+        "lottie/lottie-player.js",
+        "Herta.json"
+      ],
       "matches": ["<all_urls>"]
     }
   ]

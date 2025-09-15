@@ -65,6 +65,15 @@ async function playAlarm() {
   try {
     await ensureOffscreenDocument();
     chrome.runtime.sendMessage({ action: "play-alarm" });
+
+    // opens a popup window, commented out, didnt want to use it. remove comment if you want to use it.
+    chrome.windows.create({
+      url: chrome.runtime.getURL("popup.html"),
+      type: "popup",
+      width: 350,
+      height: 400,
+      focused: true
+    });
   } catch (err) {
     console.error("Failed to play alarm:", err);
   }
