@@ -42,10 +42,10 @@ function loadDistractionBookmarks() {
   });
 }
 
-// Keep bookmarks in sync
+// Keep bookmarks in sync. asked gpt for this code.
 chrome.bookmarks.onCreated.addListener(loadDistractionBookmarks);
 chrome.bookmarks.onRemoved.addListener(loadDistractionBookmarks);
-chrome.bookmarks.onChanged.addListener(loadDistractionBookmarks);
+chrome.bookmarks.onChanged.addListener(loadDistractionBookmarks); 
 
 async function ensureOffscreenDocument() {
   // Chrome 114+ supports this check
@@ -89,7 +89,7 @@ function checkTabForDistraction(tabId, url) {
     const tabHostname = new URL(url).hostname.replace(/^www\./, "");
     if (distractionUrls.some(host => tabHostname.endsWith(host))) {
       distractionTabIds.add(tabId);
-      console.log("🚨 Distraction detected:", url);
+      console.log("Distraction detected:", url);
       playAlarm(tabId);
     } else {
       distractionTabIds.delete(tabId);

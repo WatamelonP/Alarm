@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Distraction Alarm",
+  "name": "Herta's Distraction Alarm",
   "version": "1.0",
   "description": "Plays an alarm when you open a distracting tab.",
   "permissions": [
