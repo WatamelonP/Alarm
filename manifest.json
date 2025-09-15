@@ -20,6 +20,12 @@
     "default_title": "Distraction Alarm",
     "default_popup": "popup.html"
   },
+   "icons": {
+    "16": "herta-confident.png",
+    "32": "herta-confident.png",
+    "48": "herta-confident.png",
+    "128": "herta-confident.png"
+  },
   "web_accessible_resources": [
     {
       "resources": [

@@ -1,10 +1,24 @@
 # YOUR PROJECT TITLE
-#### Video Demo:  <URL HERE>
-#### Description: This is a Chrome extension where it plays a sound on a loop every time the user opens a tab that can serve as a distraction. The user can designate a URL as a distraction by adding the link as a bookmark inside the automatically generated bookmarks tab. This is an extension that only works if the user wants to help themself.
+#### Video Demo:  <[URL HERE](https://youtu.be/zO7MK5nViSs)>
+#### Description: This is a Chrome extension where it plays a sound for a minute every time the user opens a tab that can serve as a distraction. The user can designate a URL as a distraction by adding the URL as a bookmark inside the automatically generated bookmarks tab. This is an extension that only works if the user wants to help themself.
 
-#### known issues:
-#### CTRL + shift + t to reopen a disruptive tab triggers the same event multiple times. 
-#### popup.html wont work as intended.
+#### Instructions on how to use:
+#### 1st:
+#### go to the extensions tabs. you can access this by clicking the puzzle looking piece at the right side of the search bar.
+#### 2nd:
+#### Turn developer mode on, and click load unpacked.
+#### 3rd:
+#### Click the folder itself(going in the folder might only show the lottiefile but dont go there and just open the folder itself)
+#### 4th:
+#### After implementing, go and check the bookmarks tabs to see if the automatically generated "Distractions" tab is there.
+#### 5th:
+#### Add a URL you consider a distraction there or go to the URL itself and bookmark it(be sure to select the Distractions tab!)
+
+#### And it's done. Everytime you visit a site in that bookmarks tab, you will get a popup of madam herta bonking you urging you to focus, with an "alarm".
+
+
+#### manifest.json:
+#### contains permissions 
 
 
 #### Credits:
@@ -12,8 +26,8 @@
 #### I cant find the original edit of the alarm sound. mightve been deleted or privated in youtube.
 
 
-#### References used:    
-#### https://github.com/swantzter/crx-falling-metal-pipe 
+#### References used:
+#### https://github.com/swantzter/crx-falling-metal-pipe
 #### https://github.com/engelsjk/chrome-extension-request-audio
 #### https://stackoverflow.com/questions/14834520/html5-audio-stop-function
 
@@ -25,8 +39,8 @@
 
 
 #### Comments:
-#### Error handling in javascript is such a pain. i cant even tell if im doing something wrong even though it's working. Wouldve never thought the things i originally wanted to  do wasnt possible to do due to restrictions. 
-#### The project ended a lot faster because the things i wanted to implement are actually easy to implement thanks to google. 
+#### Error handling in javascript is such a pain. i cant even tell if im doing something wrong even though it's working. Wouldve never thought the things i originally wanted to  do wasnt possible to do due to restrictions.
+#### The project ended a lot faster because the things i wanted to implement are actually easy to implement thanks to google.
 #### The important functions of this extension is just reading and loading of the bookmarks folder, reading the current open tabs, and generating a bookmarks folder(didnt think this was possible to be honest. i thought this would be restricted.) What took me the most time to make was the popup. i kept forcing it to open using conditions but i didnt know that wasnt possible until i asked gpt haha(wasted hours because of that)
 
 #### The character i used is The Herta from Honkai StarRail. As for why i used her, it's because i thought it would suit her character pretty well. I initially wanted to make a more professional extension, one without such characters, and simply use a loud alarm sound, but i thought that would be boring, so i changed it midway.
