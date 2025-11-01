@@ -1,5 +1,5 @@
-# YOUR PROJECT TITLE
-#### Video Demo:  <[URL HERE](https://youtu.be/zO7MK5nViSs)>
+# Herta Anti-Distraction Alarm
+#### Video Demo:  <https://youtu.be/zO7MK5nViSs>
 #### Description: This is a Chrome extension where it plays a sound for a minute every time the user opens a tab that can serve as a distraction. The user can designate a URL as a distraction by adding the URL as a bookmark inside the automatically generated bookmarks tab. This is an extension that only works if the user wants to help themself.
 
 #### Instructions on how to use:
