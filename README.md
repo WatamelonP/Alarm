@@ -1,60 +1,114 @@
-# Herta Anti-Distraction Alarm
-#### Video Demo:  <https://youtu.be/zO7MK5nViSs>
-#### Description: This is a Chrome extension where it plays a sound for a minute every time the user opens a tab that can serve as a distraction. The user can designate a URL as a distraction by adding the URL as a bookmark inside the automatically generated bookmarks tab. This is an extension that only works if the user wants to help themself.
+Herta Anti-Distraction Alarm
 
-#### Instructions on how to use:
-#### 1st:
-#### go to the extensions tabs. you can access this by clicking the puzzle looking piece at the right side of the search bar.
-#### 2nd:
-#### Turn developer mode on, and click load unpacked.
-#### 3rd:
-#### Click the folder itself(going in the folder might only show the lottiefile but dont go there and just open the folder itself)
-#### 4th:
-#### After implementing, go and check the bookmarks tabs to see if the automatically generated "Distractions" tab is there.
-#### 5th:
-#### Add a URL you consider a distraction there or go to the URL itself and bookmark it(be sure to select the Distractions tab!)
+Video Demo
 
-#### And it's done. Everytime you visit a site in that bookmarks tab, you will get a popup of madam herta bonking you urging you to focus, with an "alarm".
+https://youtu.be/zO7MK5nViSs￼
 
+Description
 
-#### manifest.json:
-#### contains permissions, icons, resources used, and actions such as the popup
+Herta Anti-Distraction Alarm is a Chrome extension that plays a one-minute “alarm” whenever you open a website you’ve marked as a distraction.
+You can designate distraction sites by adding them as bookmarks inside an automatically generated “Distractions” folder.
 
-#### offscreen.html:
-#### accidentally swapped this and the popup.html... too tired to swap, nothing really changes.(ill proabbly be confused later on) uses the 
+This extension only works if you choose to help yourself — it won’t stop you from removing bookmarks. Herta will simply bonk you when you open sites you promised not to visit.
 
-#### popup.html:
-#### same as offscreen, just for the window this time. this is the window that popsup whenever you trigger the alarm.
+⸻
 
-#### offscreen.js:
-#### basically has the functions to play the sound, and the function to pause it if the tab gets closed(condition on the other )
+📌 How to Install & Use
 
-#### background.js: 
-#### the backbone. generates the "distraction" tab upon implementation, checks the current open tabs, activates the alarm upon meeting the conditions. this one was the most chaotic part of the system because at the first 3 days, i had the function names that are either so similar to each other, or something incomprehensible the day after. i had to ask copilot to change the names to something more appropriate, since it probably knew the context. but ye when i tried manually changing the names, it broke every single time. this took me the most time to make because of me, myself, and i.
+1. Open the Chrome extensions page
 
-#### Herta.json:
-#### The lottie file i used. GIFS are too low quality when i tried it but lottie does the work. this one took me the most prompts since all of the examples ive seen are mostly used within react. it took me a while to know how to implement it such as it being unable without the lottie-player.js being within the same folder(cant run with it being online.)
+Click the puzzle-piece icon beside the address bar → choose Manage Extensions.
 
-#### Credits:
-#### Honkai Star Rail's Herta and The Herta ingame voicelines, and sticker.
-#### I cant find the original edit of the alarm sound. mightve been deleted or privated in youtube.
+2. Enable Developer Mode
 
+Toggle Developer mode on (top right).
 
-#### References used:
-#### https://github.com/swantzter/crx-falling-metal-pipe
-#### https://github.com/engelsjk/chrome-extension-request-audio
-#### https://stackoverflow.com/questions/14834520/html5-audio-stop-function
+3. Click Load unpacked
 
+Select the extension folder itself.
+(Do not open the folder — just select it directly.)
 
-#### Tools used:
-#### GPT: mainly for catching errors and fixing wrong syntax. most of the codes i used are from me piecing things together from other repositories such as the ones above.
-#### Copilot: basically style50 lol(and implementing lottie. this took me the most prompts. barely just fixing with it mentioning that i cant run this without the lottie runner file being within folder.)
-#### Lottie: Used this to animate the sticker i used.
+4. Verify the Distractions folder
 
+Open your Bookmarks and confirm that an automatically generated folder named “Distractions” appears.
 
-#### Comments:
-#### Error handling in javascript is such a pain. i cant even tell if im doing something wrong even though it's working. Wouldve never thought the things i originally wanted to  do wasnt possible to do due to restrictions.
-#### The project ended a lot faster because the things i wanted to implement are actually easy to implement thanks to google.
-#### The important functions of this extension is just reading and loading of the bookmarks folder, reading the current open tabs, and generating a bookmarks folder(didnt think this was possible to be honest. i thought this would be restricted.) What took me the most time to make was the popup. i kept forcing it to open using conditions but i didnt know that wasnt possible until i asked gpt haha(wasted hours because of that)
+5. Add distraction sites
 
-#### The character i used is The Herta from Honkai StarRail. As for why i used her, it's because i thought it would suit her character pretty well. I initially wanted to make a more professional extension, one without such characters, and simply use a loud alarm sound, but i thought that would be boring, so i changed it midway.
+Bookmark any distracting URL, and make sure the bookmark’s folder is set to Distractions.
+
+⸻
+
+🎉 Done!
+
+Whenever you visit a URL inside that folder, Herta will pop up and bonk you, accompanied by the alarm sound.
+
+⸻
+
+📂 File Overview
+
+manifest.json
+
+Contains permissions, icons, linked resources, extension actions, and popup definitions.
+
+offscreen.html
+
+This accidentally ended up swapped with popup.html, but functionally nothing breaks.
+(Yes, I’ll probably confuse myself later.)
+
+popup.html
+
+Displays the popup window that appears when you trigger the alarm.
+
+offscreen.js
+
+Responsible for playing and pausing audio.
+It pauses the alarm when the tab is closed.
+
+background.js
+
+The core logic of the extension. It:
+	•	Creates the Distractions bookmark folder
+	•	Checks active tabs
+	•	Triggers the alarm based on conditions
+
+This was the most chaotic part because I had confusing function names for the first few days. Copilot renamed them for me because every time I did it manually, everything broke. This file took me the most time because of me, myself, and I.
+
+Herta.json
+
+The Lottie animation file used for the popup.
+GIFs were too low-quality, so Lottie was the better option.
+This part took a lot of prompts because most examples online assume a React setup.
+Also, it requires the lottie-player.js to be local — cannot load from a CDN.
+
+⸻
+
+🙏 Credits
+	•	Herta (Honkai: Star Rail) — character, voicelines, sticker
+	•	Alarm sound — original edit source unknown (likely deleted or privated on YouTube)
+
+⸻
+
+🔗 References
+	•	https://github.com/swantzter/crx-falling-metal-pipe
+	•	https://github.com/engelsjk/chrome-extension-request-audio
+	•	https://stackoverflow.com/questions/14834520/html5-audio-stop-function
+
+⸻
+
+🛠 Tools Used
+	•	GPT — for debugging, syntax checking, and combining ideas from samples
+	•	Copilot — basically my style50, also helped me integrate Lottie
+	•	Lottie — for animating the sticker
+
+⸻
+
+💬 Comments
+	•	Error handling in JavaScript feels like suffering. Sometimes it “works” but also “doesn’t”, and I have no idea why.
+	•	The project finished faster than expected because most features were surprisingly easy thanks to Google.
+	•	The main tasks were:
+	•	Reading & loading bookmarks
+	•	Reading current tabs
+	•	Generating a bookmarks folder (didn’t think Chrome allowed this!)
+	•	The popup took the longest to figure out. I kept trying to force it to open in ways Chrome simply does not allow. GPT saved me after many wasted hours.
+	•	I originally wanted a professional version with no characters and just a loud alarm… but that was boring.
+So I chose The Herta, because her personality fits perfectly with bonking distracted users
